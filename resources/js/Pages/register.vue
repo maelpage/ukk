@@ -1,8 +1,8 @@
 <template>
     <v-app>
         <v-main>
-            <div class="d-flex justify-center">
-                <v-card elevation="2" width="400" height="670" class="mt-7">
+            <div class="d-flex justify-center login-container">
+                <v-card elevation="2" width="400" height="550" class="rounded-lg">
                     <div class="text-center">
                         <h2 class="text-center">Register</h2>
                     </div>
@@ -15,7 +15,7 @@
                         <!-- <v-select v-model="form.level" :items="['admin', 'petugas', 'masyarakat']" label="Level" variant="outlined" :error-messages="errors.level"></v-select> -->
                         <v-btn block color="primary" @click="register">register</v-btn>
                         <div class="mt-5">
-                            <v-btn elevation="2" small x-small @click="login">login</v-btn>
+                            <v-btn elevation="2" small block x-small @click="login">login</v-btn>
                         </div>
                     </v-card-text>
                 </v-card>
@@ -23,6 +23,18 @@
         </v-main>
     </v-app>
 </template>
+
+<style>
+.login-container {
+  background-image: url("img/gunung.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+</style>
 
 <script>
 import { router } from '@inertiajs/vue3'

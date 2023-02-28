@@ -3,7 +3,16 @@
         <v-navigation-drawer v-model="drawer">
             <v-list density="compact">
                 <v-list-subheader>{{ user.nama }}</v-list-subheader>
-                <Link href="/admin" as="div">
+                <Link v-if="user.level=='petugas'" href="/petugas" as="div">
+                <v-list-item active-color="primary" to="/petugas">
+                    <template v-slot:prepend>
+                        <v-icon icon="mdi-view-dashboard"></v-icon>
+                    </template>
+
+                    <v-list-item-title>Dashboard</v-list-item-title>
+                </v-list-item>
+                </Link>
+                <Link v-if="user.level == 'admin'" href="/admin" as="div">
                 <v-list-item active-color="primary" to="/admin">
                     <template v-slot:prepend>
                         <v-icon icon="mdi-view-dashboard"></v-icon>

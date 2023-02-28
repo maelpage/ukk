@@ -21,7 +21,7 @@
         </button> -->
     </div>
     <v-table class='mt-5'>
-        <thead class='bg-blue text-subtitle-1 '>
+        <thead class='bg-light-blue text-subtitle-1 '>
             <tr>
                 <th>#</th>
                 <th>NIK</th>
